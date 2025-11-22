@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vedhika Advertising House — Premium LED Advertising in Hetauda</title>
+  <meta name="description" content="Vedhika Advertising House offers premium 115 sq.ft. HD LED outdoor advertising at Hetauda Chowk — high visibility, HD video support, and priority scheduling." />
+  <meta name="theme-color" content="#05101a" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#05070b;
+      --card:#0b0f16;
+      --muted:rgba(233,238,245,0.82);
+      --accent-1:#00b7ff;
+      --accent-2:#006aff;
+      --glass: rgba(255,255,255,0.04);
+      --radius:18px;
+      --max-width:1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+      background:linear-gradient(180deg,#03050a 0%, #06101a 100%);
+      color:var(--muted);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+
+    /* Utility */
+    .container{max-width:var(--max-width);margin:0 auto;padding:0 24px}
+    a{color:inherit}
+    h1,h2,h3{color: #fff;margin:0}
+    p{margin:0}
+
+    /* Header */
+    header{
+      position:fixed;left:0;right:0;top:0;z-index:60;
+      background:linear-gradient(180deg, rgba(5,7,11,0.88), rgba(5,7,11,0.70));
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid rgba(255,255,255,0.03);
+    }
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{
+      display:flex;align-items:center;gap:14px;
+    }
+    .logo-mark{
+      width:44px;height:44px;border-radius:8px;
+      background:linear-gradient(135deg,var(--accent-1),var(--accent-2));
+      box-shadow:0 6px 24px rgba(0,120,255,0.18);
+      display:flex;align-items:center;justify-content:center;font-weight:800;color:#00131a;
+      font-size:18px;
+    }
+    .brand-title{font-weight:700;font-size:1.05rem;color:#eaf6ff}
+    nav.desktop{display:flex;gap:24px;align-items:center}
+    nav.desktop a{font-weight:600;padding:8px 10px;border-radius:8px;opacity:0.9;text-decoration:none}
+    nav.desktop a:hover{color:var(--accent-1);background:rgba(255,255,255,0.02)}
+
+    .cta{
+      display:inline-block;padding:10px 18px;border-radius:30px;background:linear-gradient(90deg,var(--accent-1),var(--accent-2));
+      color:#00131a;font-weight:700;text-decoration:none;box-shadow:0 12px 32px rgba(0,120,255,0.14);
+    }
+
+    /* Mobile nav */
+    .mobile-toggle{display:none;cursor:pointer;padding:8px;border-radius:8px}
+    .mobile-toggle svg{display:block}
+
+    /* Hero */
+    .hero{
+      min-height:88vh;display:flex;align-items:center;
+      padding:120px 0 60px;position:relative;overflow:hidden;
+      background: radial-gradient(1000px 400px at 10% 20%, rgba(0,167,255,0.06), transparent 10%),
+                  radial-gradient(800px 360px at 90% 80%, rgba(0,120,255,0.04), transparent 12%);
+    }
+    .hero-grid{display:grid;grid-template-columns:1fr 460px;gap:48px;align-items:center;width:100%;max-width:var(--max-width);margin:0 auto;padding:0 24px}
+    .hero-copy h1{font-size:clamp(2rem,4.2vw,3.6rem);line-height:1.02;background:linear-gradient(90deg,var(--accent-1),var(--accent-2));-webkit-background-clip:text;color:transparent;margin-bottom:18px}
+    .hero-copy p{color:rgba(233,238,245,0.88);font-size:1.05rem;margin-bottom:22px;max-width:60ch}
+    .hero-actions{display:flex;gap:16px;align-items:center}
+    .ghost{padding:12px 18px;border-radius:12px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--muted);font-weight:600}
+
+    /* Mockup */
+    .mockup{
+      width:100%;height:300px;border-radius:18px;overflow:hidden;
+      background:linear-gradient(180deg,#07101a,#0b1520);position:relative;border:1px solid rgba(255,255,255,0.03);
+      box-shadow: 0 18px 60px rgba(3,10,20,0.6), inset 0 -120px 120px rgba(0,0,0,0.25);
+      display:flex;flex-direction:column;justify-content:center;align-items:center;padding:20px;
+    }
+    .mockup .screen{
+      width:95%;height:100%;border-radius:12px;background:
+      linear-gradient(180deg,#02060a,#05121a);
+      display:flex;align-items:center;justify-content:center;color:#9ecfff;font-weight:700;
+      background-image:url('about.jpg');
+      background-size:cover;background-position:center;
+      filter:contrast(1.05) saturate(1.06);
+      border-radius:12px;overflow:hidden;position:relative;
+    }
+    .mockup .label{position:absolute;left:18px;top:18px;background:rgba(0,0,0,0.45);padding:8px 12px;border-radius:999px;font-weight:700;font-size:0.86rem;color:#e6f7ff}
+
+    /* Sections */
+    section{padding:84px 0}
+    .section-title{font-size:1.9rem;margin-bottom:12px}
+    .section-sub{max-width:920px;margin:0 auto;margin-bottom:28px;color:rgba(233,238,245,0.78);text-align:center}
+
+    /* About + Stats */
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;max-width:1100px;margin:0 auto}
+    .about-text p{color:rgba(233,238,245,0.88);font-size:1.03rem;line-height:1.8}
+    .stats{display:flex;gap:22px;flex-wrap:wrap}
+    .stat-card{background:var(--card);padding:22px;border-radius:14px;min-width:160px;border:1px solid rgba(255,255,255,0.03);text-align:center}
+    .stat-card h3{font-size:1.6rem;color:transparent;background:linear-gradient(90deg,var(--accent-1),var(--accent-2));-webkit-background-clip:text}
+    .stat-card p{font-size:0.95rem;color:rgba(233,238,245,0.78)}
+
+    /* Pricing */
+    .pricing-grid{display:flex;gap:28px;justify-content:center;flex-wrap:wrap}
+    .plan{
+      width:320px;border-radius:16px;padding:28px;background:linear-gradient(180deg,#061018, #07121a);
+      border:1px solid rgba(255,255,255,0.04);box-shadow: 0 22px 48px rgba(2,8,20,0.6);
+      transition:transform .36s cubic-bezier(.2,.9,.2,1), box-shadow .36s;
+    }
+    .plan:hover{transform:translateY(-12px);box-shadow: 0 36px 80px rgba(0,120,255,0.14)}
+    .plan .title{font-weight:700;color:var(--accent-1);margin-bottom:8px}
+    .plan .price{font-size:2.1rem;font-weight:800;margin:12px 0}
+    .plan ul{list-style:none;padding:0;margin:0 0 16px;color:rgba(233,238,245,0.8)}
+    .plan li{padding:6px 0;font-size:0.98rem}
+    .plan .btn{display:inline-block;padding:10px 18px;border-radius:12px;background:linear-gradient(90deg,var(--accent-1),var(--accent-2));color:#00131a;font-weight:800;text-decoration:none}
+
+    /* Clients / logos */
+    .clients{display:flex;gap:18px;flex-wrap:wrap;align-items:center;justify-content:center}
+    .client-logo{min-width:100px;min-height:36px;padding:12px;border-radius:10px;background:rgba(255,255,255,0.02);display:flex;align-items:center;justify-content:center;font-weight:700;color:rgba(233,238,245,0.75)}
+
+    /* Contact Form */
+    .contact-grid{display:grid;grid-template-columns:1fr 420px;gap:36px;max-width:1100px;margin:0 auto;align-items:start}
+    form{background:linear-gradient(180deg,#061016,#08121a);padding:22px;border-radius:14px;border:1px solid rgba(255,255,255,0.03)}
+    label{display:block;font-size:0.86rem;margin-bottom:6px;color:rgba(233,238,245,0.78)}
+    input,textarea,select{width:100%;padding:12px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:rgba(255,255,255,0.02);color:var(--muted);outline:none;font-size:0.98rem}
+    textarea{min-height:140px;resize:vertical}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+    .form-actions{display:flex;gap:12px;align-items:center}
+    .btn-secondary{padding:10px 14px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted);font-weight:700}
+
+    /* Footer */
+    footer{padding:36px 0;border-top:1px solid rgba(255,255,255,0.03);margin-top:40px}
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+
+    /* Reveal Animations */
+    .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease, transform .6s ease}
+    .reveal.show{opacity:1;transform:none}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero-grid{grid-template-columns:1fr;gap:28px}
+      .mockup{height:240px}
+      nav.desktop{display:none}
+      .mobile-toggle{display:block}
+      .mobile-menu{display:none}
+      .about-grid{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+    }
+    @media (max-width:560px){
+      .plan{width:100%}
+      .hero-copy p{font-size:0.98rem}
+      .logo-mark{width:40px;height:40px;font-size:16px}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-inner">
+      <div class="brand" aria-label="Vedhika Advertising House">
+        <div class="logo-mark">V</div>
+        <div>
+          <div class="brand-title">Vedhika Advertising House</div>
+          <div style="font-size:0.78rem;color:rgba(233,238,245,0.6)">One Vision, Countless Possibilities</div>
+        </div>
+      </div>
+
+      <nav class="desktop" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#led">LED</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+        <a href="#book" class="cta">Book a Slot</a>
+      </nav>
+
+      <button class="mobile-toggle" aria-label="Open menu" onclick="toggleMobile()">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="#dbeefc" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu (simple) -->
+  <div id="mobileMenu" class="mobile-menu" style="display:none;position:fixed;inset:68px 18px auto 18px;background:linear-gradient(180deg,rgba(8,12,18,0.96),rgba(6,8,12,0.98));border-radius:14px;padding:18px;border:1px solid rgba(255,255,255,0.03);z-index:70">
+    <nav style="display:flex;flex-direction:column;gap:10px">
+      <a href="#home" onclick="toggleMobile()">Home</a>
+      <a href="#about" onclick="toggleMobile()">About</a>
+      <a href="#led" onclick="toggleMobile()">LED</a>
+      <a href="#pricing" onclick="toggleMobile()">Pricing</a>
+      <a href="#contact" onclick="toggleMobile()">Contact</a>
+      <a href="#book" class="cta" style="display:inline-block;margin-top:8px">Book a Slot</a>
+    </nav>
+  </div>
+
+  <!-- HERO -->
+  <main id="home">
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1>Premium Digital LED Advertising</h1>
+          <p>Showcase your brand on our ultra-bright 115 sq.ft. HD LED hoarding at the heart of Hetauda City. High impressions, HD video support, priority scheduling and tailored creative services for maximum ROI.</p>
+
+          <div class="hero-actions">
+            <a href="#pricing" class="cta">View Plans</a>
+            <a href="#contact" class="ghost">Request a Media Kit</a>
+          </div>
+
+          <div style="margin-top:22px;color:rgba(233,238,245,0.75);font-size:0.95rem">
+            <strong>Peak reach:</strong> 30K–40K daily viewers · <strong>24/7 operation</strong>
+          </div>
+        </div>
+
+        <div>
+          <div class="mockup" aria-hidden="true">
+            <div class="label">Live Preview • 115 sq.ft</div>
+            <div class="screen" role="img" aria-label="LED board preview">
+              <!-- Content is decorative: replace background-image with your ad/video thumbnail -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT / STATS -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title" style="text-align:center">About Vedhika Advertising</h2>
+        <p class="section-sub">We operate a premium outdoor LED hoarding placed at Hetauda Chowk — crafted to deliver high-impact visibility for brands who want measurable reach and premium placement.</p>
+
+        <div class="about-grid" style="margin-top:28px">
+          <div class="about-text">
+            <p>Vedhika Advertising House provides end-to-end outdoor digital advertising solutions — from HD/4K video playback compatibility and creative assistance to priority scheduling and location analytics. Our platform is engineered for superior clarity, robust uptime and operational excellence.</p>
+            <p style="margin-top:14px">We support: HD video uploads, dynamic scheduling, customized creatives, prime-hour priority, and campaign reporting. Our on-site maintenance and 24/7 monitoring guarantee continuous delivery.</p>
+          </div>
+          <div>
+            <div class="stats" style="margin-bottom:14px">
+              <div class="stat-card reveal">
+                <h3>115 sq.ft</h3>
+                <p>Premium LED area</p>
+              </div>
+              <div class="stat-card reveal">
+                <h3>24/7</h3>
+                <p>Continuous operation</p>
+              </div>
+              <div class="stat-card reveal">
+                <h3>35K+</h3>
+                <p>Daily impressions (est.)</p>
+              </div>
+            </div>
+
+            <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
+              <div class="client-logo">Retail</div>
+              <div class="client-logo">FMCG</div>
+              <div class="client-logo">Events</div>
+              <div class="client-logo">Political</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LED SECTION -->
+    <section id="led">
+      <div class="container">
+        <h2 class="section-title" style="text-align:center">LED Specifications & Capabilities</h2>
+        <p class="section-sub">Our screen is engineered for outdoor conditions with high-brightness LEDs, optimal viewing angle, and color-accurate playback suitable for both video ads and animated creatives.</p>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;margin-top:30px;max-width:1100px;margin-left:auto;margin-right:auto">
+          <div>
+            <ul style="color:rgba(233,238,245,0.86);list-style:none;padding-left:0">
+              <li style="padding:8px 0">• Display Area: 115 sq.ft. (approx.)</li>
+              <li style="padding:8px 0">• Resolution: HD/Full-HD supported</li>
+              <li style="padding:8px 0">• Brightness: High-luminance outdoor LEDs</li>
+              <li style="padding:8px 0">• Format: MP4 / H.264 / H.265 (recommended)</li>
+              <li style="padding:8px 0">• Playback: 24/7, automated scheduling</li>
+              <li style="padding:8px 0">• Support: Creative services & optimization</li>
+            </ul>
+          </div>
+          <div>
+            <div style="border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,0.03);background:linear-gradient(180deg,#05101a,#06121a);padding:18px">
+              <h3 style="margin-bottom:10px;color:var(--accent-1)">Ideal Uses</h3>
+              <p style="margin-bottom:10px;color:rgba(233,238,245,0.78)">Brand launches, product promotions, event teasers, political messaging, retail campaigns and time-sensitive calls-to-action during peak hours.</p>
+              <a href="#book" class="btn" style="padding:10px 14px;border-radius:10px;color:#00131a;background:linear-gradient(90deg,var(--accent-1),var(--accent-2));font-weight:700;text-decoration:none">Book Consultation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing">
+      <div class="container" style="text-align:center">
+        <h2 class="section-title">Premium Advertising Packages</h2>
+        <p class="section-sub">Transparent plans for different business needs. All packages include HD video support and campaign reporting. Custom enterprise packages available on request.</p>
+
+        <div class="pricing-grid" style="margin-top:28px">
+          <div class="plan reveal">
+            <div class="title">Starter</div>
+            <div class="price">Rs. 5,000 / mo</div>
+            <ul>
+              <li>10 ads/day • 8-sec slots</li>
+              <li>Standard rotation</li>
+              <li>Basic reporting</li>
+            </ul>
+            <a href="#contact" class="btn">Get Started</a>
+          </div>
+
+          <div class="plan reveal" style="border:1px solid rgba(0,160,255,0.14);box-shadow:0 28px 70px rgba(0,120,255,0.12);transform:translateY(-6px)">
+            <div class="title">Business</div>
+            <div class="price">Rs. 12,000 / mo</div>
+            <ul>
+              <li>25 ads/day • 15-sec slots</li>
+              <li>Priority rotation (peak hours)</li>
+              <li>Detailed analytics & support</li>
+            </ul>
+            <a href="#contact" class="btn">Request Quote</a>
+          </div>
+
+          <div class="plan reveal">
+            <div class="title">Elite</div>
+            <div class="price">Rs. 20,000 / mo</div>
+            <ul>
+              <li>50 ads/day • 20-sec slots</li>
+              <li>Top-tier placement & prime-hour guarantee</li>
+              <li>Dedicated account manager & reporting</li>
+            </ul>
+            <a href="#contact" class="btn">Book Elite</a>
+          </div>
+        </div>
+
+        <div style="margin-top:18px;font-size:0.95rem;color:rgba(233,238,245,0.75)">Need a custom schedule or multi-month campaign? <a href="#contact" style="color:var(--accent-1);text-decoration:none">Contact our team</a>.</div>
+      </div>
+    </section>
+
+    <!-- CLIENTS -->
+    <section>
+      <div class="container" style="text-align:center">
+        <h2 class="section-title">Trusted By</h2>
+        <p class="section-sub">Brands, event organizers and agencies who choose premium placement for their campaigns.</p>
+
+        <div class="clients" style="margin-top:20px">
+          <div class="client-logo">Brand A</div>
+          <div class="client-logo">Brand B</div>
+          <div class="client-logo">Event X</div>
+          <div class="client-logo">Agency Y</div>
+          <div class="client-logo">Retail Z</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / BOOK -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title" style="text-align:center">Get In Touch</h2>
+        <p class="section-sub">Tell us about your campaign and preferred schedule. We'll reply with a media kit, creative guidelines and next-available slots.</p>
+
+        <div class="contact-grid" style="margin-top:24px">
+          <form id="contactForm" onsubmit="handleForm(event)" aria-label="Contact form">
+            <div class="form-row">
+              <div>
+                <label for="name">Full name</label>
+                <input id="name" name="name" required placeholder="Your full name">
+              </div>
+              <div>
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" required placeholder="+977-98XXXXXXXX">
+              </div>
+            </div>
+
+            <div style="margin-bottom:12px">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required placeholder="you@company.com">
+            </div>
+
+            <div style="margin-bottom:12px">
+              <label for="company">Company / Brand (optional)</label>
+              <input id="company" name="company" placeholder="Brand or organisation">
+            </div>
+
+            <div style="margin-bottom:12px">
+              <label for="message">Campaign details</label>
+              <textarea id="message" name="message" placeholder="Brief about your campaign, preferred dates, video length, etc." required></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="cta">Send Request</button>
+              <button type="button" class="btn-secondary" onclick="fillDemo()">Fill demo</button>
+            </div>
+          </form>
+
+          <aside style="padding:18px;border-radius:14px;background:linear-gradient(180deg,#061018,#07121a);border:1px solid rgba(255,255,255,0.03)">
+            <h3 style="margin-bottom:8px;color:var(--accent-1)">Office & Contact</h3>
+            <p style="margin-bottom:8px">📍 Hetauda, Makwanpur, Nepal</p>
+            <p style="margin-bottom:8px">📞 +977-9841XXXXX</p>
+            <p style="margin-bottom:8px">✉ hello@vedhika.ad</p>
+            <div style="margin-top:14px">
+              <strong style="display:block;margin-bottom:8px">Quick actions</strong>
+              <a href="mailto:hello@vedhika.ad" class="ghost" style="display:inline-block;margin-right:8px">Email</a>
+              <a href="#book" class="cta" style="display:inline-block">Book a Call</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <div style="display:flex;flex-direction:column">
+        <div style="font-weight:700;color:#fff">Vedhika Advertising House</div>
+        <div style="font-size:0.92rem;color:rgba(233,238,245,0.7)">© 2025 Vedhika Advertising — All rights reserved</div>
+      </div>
+
+      <div style="display:flex;gap:18px;align-items:center">
+        <div style="font-size:0.92rem;color:rgba(233,238,245,0.75)">Privacy</div>
+        <div style="font-size:0.92rem;color:rgba(233,238,245,0.75)">Terms</div>
+        <div style="font-size:0.92rem;color:rgba(233,238,245,0.75)">Sitemap</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Small JS for navigation and reveal -->
+  <script>
+    // Mobile menu toggle
+    function toggleMobile(){
+      const el = document.getElementById('mobileMenu');
+      if(!el) return;
+      el.style.display = (el.style.display === 'none' || el.style.display === '') ? 'block' : 'none';
+    }
+
+    // Smooth scroll for in-page anchors
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', function(e){
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target){
+          e.preventDefault();
+          target.scrollIntoView({behavior:'smooth', block:'start'});
+          // close mobile menu if open
+          const mm = document.getElementById('mobileMenu');
+          if(mm && mm.style.display === 'block') mm.style.display = 'none';
+        }
+      });
+    });
+
+    // Simple reveal on scroll
+    function revealOnScroll(){
+      document.querySelectorAll('.reveal').forEach(el=>{
+        const r = el.getBoundingClientRect();
+        if(r.top <= (window.innerHeight - 80)){
+          el.classList.add('show')
+        }
+      })
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+
+    // Demo form behavior (no backend)
+    function handleForm(e){
+      e.preventDefault();
+      const form = e.target;
+      // Simple UX feedback
+      const name = form.name.value || 'Friend';
+      alert('Thanks, ' + name + '! We received your request. We will contact you shortly with available slots and the media kit.');
+      form.reset();
+    }
+    function fillDemo(){
+      document.getElementById('name').value = 'Demo User';
+      document.getElementById('phone').value = '+977-9841XXXXX';
+      document.getElementById('email').value = 'demo@company.com';
+      document.getElementById('company').value = 'Demo Brand';
+      document.getElementById('message').value = 'Looking to run a 2-week campaign in Dec. Need 15-sec video slots and prime-hour exposure.';
+    }
+  </script>
+</body>
+</html>
