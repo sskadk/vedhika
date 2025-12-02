@@ -2,494 +2,558 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Vedhika Advertising House — Premium LED Advertising in Hetauda</title>
-  <link rel="icon" type="image/png" href="favicon.png">
-  <meta name="description" content="Vedhika Advertising House offers premium 115 sq.ft. HD LED outdoor advertising at Hetauda Chowk — high visibility, HD video support, and priority scheduling." />
-  <meta name="theme-color" content="#05101a" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vedhika Advertising — Professional LED Video & Outdoor Media</title>
+  <meta name="description" content="Vedhika Advertising — premium LED video advertising in Hetauda. Full-service creative, scheduling, and analytics for outdoor LED hoardings and billboards." />
+  <meta name="author" content="Vedhika Advertising House" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <style>
-    :root{
-      --bg:#05070b;
-      --card:#0b0f16;
-      --muted:rgba(233,238,245,0.82);
-      --accent-1:#00b7ff;
-      --accent-2:#006aff;
-      --glass: rgba(255,255,255,0.04);
-      --radius:18px;
-      --max-width:1200px;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
-      background:linear-gradient(180deg,#03050a 0%, #06101a 100%);
-      color:var(--muted);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.5;
-    }
-
-    /* Utility */
-    .container{max-width:var(--max-width);margin:0 auto;padding:0 24px}
-    a{color:inherit}
-    h1,h2,h3{color: #fff;margin:0}
-    p{margin:0}
-
-    /* Header */
-    header{
-      position:fixed;left:0;right:0;top:0;z-index:60;
-      background:linear-gradient(180deg, rgba(5,7,11,0.88), rgba(5,7,11,0.70));
-      backdrop-filter: blur(10px);
-      border-bottom:1px solid rgba(255,255,255,0.03);
-    }
-    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
-    .brand{
-      display:flex;align-items:center;gap:14px;
-    }
-    .logo-mark{
-      width:44px;height:44px;border-radius:8px;
-      background:linear-gradient(135deg,var(--accent-1),var(--accent-2));
-      box-shadow:0 6px 24px rgba(0,120,255,0.18);
-      display:flex;align-items:center;justify-content:center;font-weight:800;color:#00131a;
-      font-size:18px;
-    }
-    .brand-title{font-weight:700;font-size:1.05rem;color:#eaf6ff}
-    nav.desktop{display:flex;gap:24px;align-items:center}
-    nav.desktop a{font-weight:600;padding:8px 10px;border-radius:8px;opacity:0.9;text-decoration:none}
-    nav.desktop a:hover{color:var(--accent-1);background:rgba(255,255,255,0.02)}
-
-    .cta{
-      display:inline-block;padding:10px 18px;border-radius:30px;background:linear-gradient(90deg,var(--accent-1),var(--accent-2));
-      color:#00131a;font-weight:700;text-decoration:none;box-shadow:0 12px 32px rgba(0,120,255,0.14);
-    }
-
-    /* Mobile nav */
-    .mobile-toggle{display:none;cursor:pointer;padding:8px;border-radius:8px}
-    .mobile-toggle svg{display:block}
-
-    /* Hero */
-    .hero{
-      min-height:88vh;display:flex;align-items:center;
-      padding:120px 0 60px;position:relative;overflow:hidden;
-      background: radial-gradient(1000px 400px at 10% 20%, rgba(0,167,255,0.06), transparent 10%),
-                  radial-gradient(800px 360px at 90% 80%, rgba(0,120,255,0.04), transparent 12%);
-    }
-    .hero-grid{display:grid;grid-template-columns:1fr 460px;gap:48px;align-items:center;width:100%;max-width:var(--max-width);margin:0 auto;padding:0 24px}
-    .hero-copy h1{font-size:clamp(2rem,4.2vw,3.6rem);line-height:1.02;background:linear-gradient(90deg,var(--accent-1),var(--accent-2));-webkit-background-clip:text;color:transparent;margin-bottom:18px}
-    .hero-copy p{color:rgba(233,238,245,0.88);font-size:1.05rem;margin-bottom:22px;max-width:60ch}
-    .hero-actions{display:flex;gap:16px;align-items:center}
-    .ghost{padding:12px 18px;border-radius:12px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--muted);font-weight:600}
-
-    /* Mockup */
-    .mockup{
-      width:100%;height:300px;border-radius:18px;overflow:hidden;
-      background:linear-gradient(180deg,#07101a,#0b1520);position:relative;border:1px solid rgba(255,255,255,0.03);
-      box-shadow: 0 18px 60px rgba(3,10,20,0.6), inset 0 -120px 120px rgba(0,0,0,0.25);
-      display:flex;flex-direction:column;justify-content:center;align-items:center;padding:20px;
-    }
-    .mockup .screen{
-      width:95%;height:100%;border-radius:12px;background:
-      linear-gradient(180deg,#02060a,#05121a);
-      display:flex;align-items:center;justify-content:center;color:#9ecfff;font-weight:700;
-      background-image:url('about.jpg');
-      background-size:cover;background-position:center;
-      filter:contrast(1.05) saturate(1.06);
-      border-radius:12px;overflow:hidden;position:relative;
-    }
-    .mockup .label{position:absolute;left:18px;top:18px;background:rgba(0,0,0,0.45);padding:8px 12px;border-radius:999px;font-weight:700;font-size:0.86rem;color:#e6f7ff}
-
-    /* Sections */
-    section{padding:84px 0}
-    .section-title{font-size:1.9rem;margin-bottom:12px}
-    .section-sub{max-width:920px;margin:0 auto;margin-bottom:28px;color:rgba(233,238,245,0.78);text-align:center}
-
-    /* About + Stats */
-    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;max-width:1100px;margin:0 auto}
-    .about-text p{color:rgba(233,238,245,0.88);font-size:1.03rem;line-height:1.8}
-    .stats{display:flex;gap:22px;flex-wrap:wrap}
-    .stat-card{background:var(--card);padding:22px;border-radius:14px;min-width:160px;border:1px solid rgba(255,255,255,0.03);text-align:center}
-    .stat-card h3{font-size:1.6rem;color:transparent;background:linear-gradient(90deg,var(--accent-1),var(--accent-2));-webkit-background-clip:text}
-    .stat-card p{font-size:0.95rem;color:rgba(233,238,245,0.78)}
-
-    /* Pricing */
-    .pricing-grid{display:flex;gap:28px;justify-content:center;flex-wrap:wrap}
-    .plan{
-      width:320px;border-radius:16px;padding:28px;background:linear-gradient(180deg,#061018, #07121a);
-      border:1px solid rgba(255,255,255,0.04);box-shadow: 0 22px 48px rgba(2,8,20,0.6);
-      transition:transform .36s cubic-bezier(.2,.9,.2,1), box-shadow .36s;
-    }
-    .plan:hover{transform:translateY(-12px);box-shadow: 0 36px 80px rgba(0,120,255,0.14)}
-    .plan .title{font-weight:700;color:var(--accent-1);margin-bottom:8px}
-    .plan .price{font-size:2.1rem;font-weight:800;margin:12px 0}
-    .plan ul{list-style:none;padding:0;margin:0 0 16px;color:rgba(233,238,245,0.8)}
-    .plan li{padding:6px 0;font-size:0.98rem}
-    .plan .btn{display:inline-block;padding:10px 18px;border-radius:12px;background:linear-gradient(90deg,var(--accent-1),var(--accent-2));color:#00131a;font-weight:800;text-decoration:none}
-
-    /* Clients / logos */
-    .clients{display:flex;gap:18px;flex-wrap:wrap;align-items:center;justify-content:center}
-    .client-logo{min-width:100px;min-height:36px;padding:12px;border-radius:10px;background:rgba(255,255,255,0.02);display:flex;align-items:center;justify-content:center;font-weight:700;color:rgba(233,238,245,0.75)}
-
-    /* Contact Form */
-    .contact-grid{display:grid;grid-template-columns:1fr 420px;gap:36px;max-width:1100px;margin:0 auto;align-items:start}
-    form{background:linear-gradient(180deg,#061016,#08121a);padding:22px;border-radius:14px;border:1px solid rgba(255,255,255,0.03)}
-    label{display:block;font-size:0.86rem;margin-bottom:6px;color:rgba(233,238,245,0.78)}
-    input,textarea,select{width:100%;padding:12px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:rgba(255,255,255,0.02);color:var(--muted);outline:none;font-size:0.98rem}
-    textarea{min-height:140px;resize:vertical}
-    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
-    .form-actions{display:flex;gap:12px;align-items:center}
-    .btn-secondary{padding:10px 14px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted);font-weight:700}
-
-    /* Footer */
-    footer{padding:36px 0;border-top:1px solid rgba(255,255,255,0.03);margin-top:40px}
-    .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
-
-    /* Reveal Animations */
-    .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease, transform .6s ease}
-    .reveal.show{opacity:1;transform:none}
-
-    /* Responsive */
-    @media (max-width:980px){
-      .hero-grid{grid-template-columns:1fr;gap:28px}
-      .mockup{height:240px}
-      nav.desktop{display:none}
-      .mobile-toggle{display:block}
-      .mobile-menu{display:none}
-      .about-grid{grid-template-columns:1fr}
-      .contact-grid{grid-template-columns:1fr}
-    }
-    @media (max-width:560px){
-      .plan{width:100%}
-      .hero-copy p{font-size:0.98rem}
-      .logo-mark{width:40px;height:40px;font-size:16px}
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Header -->
-  <header>
-    <div class="container nav-inner">
-      <div class="brand" aria-label="Vedhika Advertising House">
-        <img class="logo-mark" src="favicon.png" alt="Vedhika Advertising Logo" />
-        <div>
-          <div class="brand-title">Vedhika Advertising House</div>
-          <div style="font-size:0.78rem;color:rgba(233,238,245,0.6)">One Vision, Countless Possibilities</div>
-        </div>
-      </div>
-
-      <nav class="desktop" aria-label="Primary">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#led">LED</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#contact">Contact</a>
-        <a href="#book" class="cta">Book a Slot</a>
-      </nav>
-
-      <button class="mobile-toggle" aria-label="Open menu" onclick="toggleMobile()">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="#dbeefc" stroke-width="1.6" stroke-linecap="round"/></svg>
-      </button>
-    </div>
-  </header>
-
-  <!-- Mobile menu (simple) -->
-  <div id="mobileMenu" class="mobile-menu" style="display:none;position:fixed;inset:68px 18px auto 18px;background:linear-gradient(180deg,rgba(8,12,18,0.96),rgba(6,8,12,0.98));border-radius:14px;padding:18px;border:1px solid rgba(255,255,255,0.03);z-index:70">
-    <nav style="display:flex;flex-direction:column;gap:10px">
-      <a href="#home" onclick="toggleMobile()">Home</a>
-      <a href="#about" onclick="toggleMobile()">About</a>
-      <a href="#led" onclick="toggleMobile()">LED</a>
-      <a href="#pricing" onclick="toggleMobile()">Pricing</a>
-      <a href="#contact" onclick="toggleMobile()">Contact</a>
-      <a href="#book" class="cta" style="display:inline-block;margin-top:8px">Book a Slot</a>
-    </nav>
-  </div>
-
-  <!-- HERO -->
-  <main id="home">
-    <section class="hero">
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <h1>Premium Digital LED Advertising</h1>
-          <p>Showcase your brand on our ultra-bright 115 sq.ft. HD LED hoarding at the heart of Hetauda City. High impressions, HD video support, priority scheduling and tailored creative services for maximum ROI.</p>
-
-          <div class="hero-actions">
-            <a href="#pricing" class="cta">View Plans</a>
-            <a href="#contact" class="ghost">Request a Media Kit</a>
-          </div>
-
-          <div style="margin-top:22px;color:rgba(233,238,245,0.75);font-size:0.95rem">
-            <strong>Peak reach:</strong> 30K–40K daily viewers · <strong>24/7 operation</strong>
-          </div>
-        </div>
-
-        <div>
-          <div class="mockup" aria-hidden="true">
-            <div class="label">Live Preview • 115 sq.ft</div>
-            <div class="screen" role="img" aria-label="LED board preview">
-              <!-- Content is decorative: replace background-image with your ad/video thumbnail -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT / STATS -->
-    <section id="about">
-      <div class="container">
-        <h2 class="section-title" style="text-align:center">About Vedhika Advertising</h2>
-        <p class="section-sub">We operate a premium outdoor LED hoarding placed at Hetauda Chowk — crafted to deliver high-impact visibility for brands who want measurable reach and premium placement.</p>
-
-        <div class="about-grid" style="margin-top:28px">
-          <div class="about-text">
-            <p>Vedhika Advertising House provides end-to-end outdoor digital advertising solutions — from HD/4K video playback compatibility and creative assistance to priority scheduling and location analytics. Our platform is engineered for superior clarity, robust uptime and operational excellence.</p>
-            <p style="margin-top:14px">We support: HD video uploads, dynamic scheduling, customized creatives, prime-hour priority, and campaign reporting. Our on-site maintenance and 24/7 monitoring guarantee continuous delivery.</p>
-          </div>
-          <div>
-            <div class="stats" style="margin-bottom:14px">
-              <div class="stat-card reveal">
-                <h3>115 sq.ft</h3>
-                <p>Premium LED area</p>
-              </div>
-              <div class="stat-card reveal">
-                <h3>24/7</h3>
-                <p>Continuous operation</p>
-              </div>
-              <div class="stat-card reveal">
-                <h3>35K+</h3>
-                <p>Daily impressions (est.)</p>
-              </div>
-            </div>
-
-            <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
-              <div class="client-logo">Retail</div>
-              <div class="client-logo">FMCG</div>
-              <div class="client-logo">Events</div>
-              <div class="client-logo">Political</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- LED SECTION -->
-    <section id="led">
-      <div class="container">
-        <h2 class="section-title" style="text-align:center">LED Specifications & Capabilities</h2>
-        <p class="section-sub">Our screen is engineered for outdoor conditions with high-brightness LEDs, optimal viewing angle, and color-accurate playback suitable for both video ads and animated creatives.</p>
-
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;margin-top:30px;max-width:1100px;margin-left:auto;margin-right:auto">
-          <div>
-            <ul style="color:rgba(233,238,245,0.86);list-style:none;padding-left:0">
-              <li style="padding:8px 0">• Display Area: 115 sq.ft. (approx.)</li>
-              <li style="padding:8px 0">• Resolution: HD/Full-HD supported</li>
-              <li style="padding:8px 0">• Brightness: High-luminance outdoor LEDs</li>
-              <li style="padding:8px 0">• Format: MP4 / H.264 / H.265 (recommended)</li>
-              <li style="padding:8px 0">• Playback: 24/7, automated scheduling</li>
-              <li style="padding:8px 0">• Support: Creative services & optimization</li>
-            </ul>
-          </div>
-          <div>
-            <div style="border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,0.03);background:linear-gradient(180deg,#05101a,#06121a);padding:18px">
-              <h3 style="margin-bottom:10px;color:var(--accent-1)">Ideal Uses</h3>
-              <p style="margin-bottom:10px;color:rgba(233,238,245,0.78)">Brand launches, product promotions, event teasers, political messaging, retail campaigns and time-sensitive calls-to-action during peak hours.</p>
-              <a href="#book" class="btn" style="padding:10px 14px;border-radius:10px;color:#00131a;background:linear-gradient(90deg,var(--accent-1),var(--accent-2));font-weight:700;text-decoration:none">Book Consultation</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PRICING -->
-    <section id="pricing">
-      <div class="container" style="text-align:center">
-        <h2 class="section-title">Premium Advertising Packages</h2>
-        <p class="section-sub">Transparent plans for different business needs. All packages include HD video support and campaign reporting. Custom enterprise packages available on request.</p>
-
-        <div class="pricing-grid" style="margin-top:28px">
-          <div class="plan reveal">
-            <div class="title">Starter</div>
-            <div class="price">Rs. 5,000 / mo</div>
-            <ul>
-              <li>10 ads/day • 8-sec slots</li>
-              <li>Standard rotation</li>
-              <li>Basic reporting</li>
-            </ul>
-            <a href="#contact" class="btn">Get Started</a>
-          </div>
-
-          <div class="plan reveal" style="border:1px solid rgba(0,160,255,0.14);box-shadow:0 28px 70px rgba(0,120,255,0.12);transform:translateY(-6px)">
-            <div class="title">Business</div>
-            <div class="price">Rs. 12,000 / mo</div>
-            <ul>
-              <li>25 ads/day • 15-sec slots</li>
-              <li>Priority rotation (peak hours)</li>
-              <li>Detailed analytics & support</li>
-            </ul>
-            <a href="#contact" class="btn">Request Quote</a>
-          </div>
-
-          <div class="plan reveal">
-            <div class="title">Elite</div>
-            <div class="price">Rs. 20,000 / mo</div>
-            <ul>
-              <li>50 ads/day • 20-sec slots</li>
-              <li>Top-tier placement & prime-hour guarantee</li>
-              <li>Dedicated account manager & reporting</li>
-            </ul>
-            <a href="#contact" class="btn">Book Elite</a>
-          </div>
-        </div>
-
-        <div style="margin-top:18px;font-size:0.95rem;color:rgba(233,238,245,0.75)">Need a custom schedule or multi-month campaign? <a href="#contact" style="color:var(--accent-1);text-decoration:none">Contact our team</a>.</div>
-      </div>
-    </section>
-
-    <!-- CLIENTS -->
-    <section>
-      <div class="container" style="text-align:center">
-        <h2 class="section-title">Trusted By</h2>
-        <p class="section-sub">Brands, event organizers and agencies who choose premium placement for their campaigns.</p>
-
-        <div class="clients" style="margin-top:20px">
-          <div class="client-logo">Brand A</div>
-          <div class="client-logo">Brand B</div>
-          <div class="client-logo">Event X</div>
-          <div class="client-logo">Agency Y</div>
-          <div class="client-logo">Retail Z</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT / BOOK -->
-    <section id="contact">
-      <div class="container">
-        <h2 class="section-title" style="text-align:center">Get In Touch</h2>
-        <p class="section-sub">Tell us about your campaign and preferred schedule. We'll reply with a media kit, creative guidelines and next-available slots.</p>
-
-        <div class="contact-grid" style="margin-top:24px">
-          <form id="contactForm" onsubmit="handleForm(event)" aria-label="Contact form">
-            <div class="form-row">
-              <div>
-                <label for="name">Full name</label>
-                <input id="name" name="name" required placeholder="Your full name">
-              </div>
-              <div>
-                <label for="phone">Phone</label>
-                <input id="phone" name="phone" required placeholder="+977-98XXXXXXXX">
-              </div>
-            </div>
-
-            <div style="margin-bottom:12px">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" required placeholder="you@company.com">
-            </div>
-
-            <div style="margin-bottom:12px">
-              <label for="company">Company / Brand (optional)</label>
-              <input id="company" name="company" placeholder="Brand or organisation">
-            </div>
-
-            <div style="margin-bottom:12px">
-              <label for="message">Campaign details</label>
-              <textarea id="message" name="message" placeholder="Brief about your campaign, preferred dates, video length, etc." required></textarea>
-            </div>
-
-            <div class="form-actions">
-              <button type="submit" class="cta">Send Request</button>
-              <button type="button" class="btn-secondary" onclick="fillDemo()">Fill demo</button>
-            </div>
-          </form>
-
-          <aside style="padding:18px;border-radius:14px;background:linear-gradient(180deg,#061018,#07121a);border:1px solid rgba(255,255,255,0.03)">
-            <h3 style="margin-bottom:8px;color:var(--accent-1)">Office & Contact</h3>
-            <p style="margin-bottom:8px">📍 Hetauda, Makwanpur, Nepal</p>
-            <p style="margin-bottom:8px">📞 +977-9841XXXXX</p>
-            <p style="margin-bottom:8px">✉ hello@vedhika.ad</p>
-            <div style="margin-top:14px">
-              <strong style="display:block;margin-bottom:8px">Quick actions</strong>
-              <a href="mailto:hello@vedhika.ad" class="ghost" style="display:inline-block;margin-right:8px">Email</a>
-              <a href="#book" class="cta" style="display:inline-block">Book a Call</a>
-            </div>
-          </aside>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="container footer-inner">
-      <div style="display:flex;flex-direction:column">
-        <div style="font-weight:700;color:#fff">Vedhika Advertising House</div>
-        <div style="font-size:0.92rem;color:rgba(233,238,245,0.7)">© 2025 Vedhika Advertising — All rights reserved</div>
-      </div>
-
-      <div style="display:flex;gap:18px;align-items:center">
-        <div style="font-size:0.92rem;color:rgba(233,238,245,0.75)">Privacy</div>
-        <div style="font-size:0.92rem;color:rgba(233,238,245,0.75)">Terms</div>
-        <div style="font-size:0.92rem;color:rgba(233,238,245,0.75)">Sitemap</div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Small JS for navigation and reveal -->
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    // Mobile menu toggle
-    function toggleMobile(){
-      const el = document.getElementById('mobileMenu');
-      if(!el) return;
-      el.style.display = (el.style.display === 'none' || el.style.display === '') ? 'block' : 'none';
-    }
-
-    // Smooth scroll for in-page anchors
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', function(e){
-        const target = document.querySelector(this.getAttribute('href'));
-        if(target){
-          e.preventDefault();
-          target.scrollIntoView({behavior:'smooth', block:'start'});
-          // close mobile menu if open
-          const mm = document.getElementById('mobileMenu');
-          if(mm && mm.style.display === 'block') mm.style.display = 'none';
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0f172a',
+            accent: '#0ea5a4',
+            highlight: '#7c3aed'
+          },
+          boxShadow: { soft: '0 8px 30px rgba(2,6,23,0.08)' }
         }
-      });
-    });
-
-    // Simple reveal on scroll
-    function revealOnScroll(){
-      document.querySelectorAll('.reveal').forEach(el=>{
-        const r = el.getBoundingClientRect();
-        if(r.top <= (window.innerHeight - 80)){
-          el.classList.add('show')
-        }
-      })
-    }
-    window.addEventListener('scroll', revealOnScroll);
-    window.addEventListener('load', revealOnScroll);
-
-    // Demo form behavior (no backend)
-    function handleForm(e){
-      e.preventDefault();
-      const form = e.target;
-      // Simple UX feedback
-      const name = form.name.value || 'Friend';
-      alert('Thanks, ' + name + '! We received your request. We will contact you shortly with available slots and the media kit.');
-      form.reset();
-    }
-    function fillDemo(){
-      document.getElementById('name').value = 'Demo User';
-      document.getElementById('phone').value = '+977-9841XXXXX';
-      document.getElementById('email').value = 'demo@company.com';
-      document.getElementById('company').value = 'Demo Brand';
-      document.getElementById('message').value = 'Looking to run a 2-week campaign in Dec. Need 15-sec video slots and prime-hour exposure.';
+      }
     }
   </script>
+
+  <!-- Lottie for micro-animations -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  <style>
+    .glass { background: rgba(255,255,255,0.85); backdrop-filter: blur(6px); }
+    .lead { font-size: 1.125rem; color: #334155; }
+    .hero-overlay { background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.9)); }
+    .screen-mask { mix-blend-mode: multiply; opacity: 0.98; }
+    @keyframes float { 0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)} }
+    .float { animation: float 6s ease-in-out infinite; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased">
+
+<!-- TOP BAR -->
+<div class="bg-white border-b">
+  <div class="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center text-sm text-gray-600">
+    <div>📍 Hetauda, Nepal • +977 9845687456</div>
+    <div>Sun-Fri : 9:00-18:00 • support@vedhika.com.np</div>
+  </div>
+</div>
+
+<!-- NAV -->
+<header class="sticky top-0 z-50 bg-white shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-4">
+      <div class="w-12 h-12 rounded-xl overflow-hidden">
+        <img src="favicon.png" alt="Vedhika logo" class="w-full h-full object-contain" />
+      </div>
+      <div>
+        <a href="#home" class="font-bold text-lg">Vedhika Advertising House</a>
+        <div class="text-xs text-gray-500">LED Video — Outdoor Media Solutions</div>
+      </div>
+    </div>
+
+    <nav class="hidden lg:flex items-center gap-6 text-sm">
+      <a href="#services" class="hover:text-accent">Services</a>
+      <a href="#portfolio" class="hover:text-accent">Portfolio</a>
+      <a href="#pricing" class="hover:text-accent">Pricing</a>
+      <a href="#insights" class="hover:text-accent">Insights</a>
+      <a href="#contact" class="hover:text-accent">Contact</a>
+      <button id="bookTop" class="ml-4 px-4 py-2 rounded-lg bg-accent text-white shadow">Book Now</button>
+    </nav>
+
+    <button id="mobileToggle" class="lg:hidden p-2 rounded-md border border-gray-200">☰</button>
+  </div>
+
+  <!-- mobile menu -->
+  <div id="mobileMenu" class="lg:hidden hidden border-t">
+    <div class="px-6 py-4 space-y-3">
+      <a href="#services" class="block">Services</a>
+      <a href="#portfolio" class="block">Portfolio</a>
+      <a href="#pricing" class="block">Pricing</a>
+      <a href="#insights" class="block">Insights</a>
+      <a href="#contact" class="block">Contact</a>
+      <button id="bookMobile" class="w-full mt-2 px-4 py-2 rounded-lg bg-accent text-white">Book Now</button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO (Large, refined, with CTA grid & media) -->
+<section id="home" class="relative overflow-hidden">
+<div class="absolute inset-0 overflow-hidden">
+  
+  <!-- VIDEO BACKGROUND -->
+  <video autoplay muted loop playsinline 
+         class="w-full h-full object-cover">
+    <source src="hero.mp4" type="video/mp4">
+  </video>
+  
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black/40 hero-overlay"></div>
+
+</div>
+
+
+  <div class="relative max-w-7xl mx-auto px-6 py-28 grid lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-7">
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Your Campaign. Bigger. Brighter. Better.</h1>
+      <p class="lead mt-4">Vedhika runs high-impact LED video campaigns on Hetauda’s premium hoardings- creative production, optimized scheduling and measurement, all under one roof.</p>
+
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="#pricing" class="inline-flex items-center gap-3 px-6 py-3 bg-accent text-white rounded-lg shadow">Book a Slot</a>
+        <a href="#portfolio" class="inline-flex items-center gap-3 px-6 py-3 border rounded-lg">See Portfolio</a>
+      </div>
+
+      <!-- trust / metrics -->
+      <div class="mt-8 grid grid-cols-3 gap-6">
+        <div class="bg-white p-4 rounded-lg shadow text-center">
+          <div class="text-sm text-gray-500">Daily Reach</div>
+          <div class="text-2xl font-bold text-accent">15K+</div>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow text-center">
+          <div class="text-sm text-gray-500">Avg CTR (OOH)</div>
+          <div class="text-2xl font-bold text-accent">1.2%</div>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow text-center">
+          <div class="text-sm text-gray-500">Client ROI</div>
+          <div class="text-2xl font-bold text-accent">+35%</div>
+        </div>
+      </div>
+
+    </div>
+
+<!-- LED Mockup Display -->
+<div class="lg:col-span-5">
+
+    <div class="relative rounded-3xl overflow-hidden shadow-xl bg-black">
+
+        <!-- Soft glow behind the frame -->
+        <div class="absolute inset-0 bg-black/40 blur-xl z-0"></div>
+
+        <!-- VIDEO INSIDE THE LED FRAME -->
+        <video autoplay muted loop playsinline
+            class="absolute inset-0 w-full h-full object-cover">
+            <source src="video.mp4" type="video/mp4">
+        </video>
+
+        <!-- FRONT PNG MOCKUP -->
+        <img src="ledmockup.png"
+            class="relative w-full h-auto pointer-events-none select-none" />
+
+    </div>
+
+    <!-- Captions -->
+    <div class="mt-4 flex items-center justify-between text-sm text-gray-500">
+        <span class="font-medium text-gray-700">Hetauda - 115 sq.ft LED</span>
+        <span class="font-medium text-gray-700">4K-ready playback</span>
+    </div>
+
+</div>
+
+
+  </div>
+</section>
+
+<!-- SERVICES DETAILED -->
+<section id="services" class="py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid lg:grid-cols-3 gap-8">
+      <div class="lg:col-span-2">
+        <h2 class="text-2xl font-extrabold">What We Do</h2>
+        <p class="text-gray-600 mt-2">Full-service LED advertising: creative, delivery, monitoring, and optimization. We focus on measurable results for brands that want visibility and performance.</p>
+
+        <div class="mt-8 grid md:grid-cols-2 gap-6">
+          <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
+            <div class="flex items-start gap-4">
+              <div class="p-3 rounded-lg bg-indigo-50 text-indigo-600">🎬</div>
+              <div>
+                <h4 class="font-semibold">Creative Production</h4>
+                <p class="text-sm text-gray-600 mt-1">Motion graphics, quick-cut ads, and LED-optimized color grading for maximum legibility.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
+            <div class="flex items-start gap-4">
+              <div class="p-3 rounded-lg bg-indigo-50 text-indigo-600">📅</div>
+              <div>
+                <h4 class="font-semibold">Scheduling & Dayparting</h4>
+                <p class="text-sm text-gray-600 mt-1">Target the times that matter — morning commute, lunch, or evening peak — to maximize impact.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
+            <div class="flex items-start gap-4">
+              <div class="p-3 rounded-lg bg-indigo-50 text-indigo-600">🔍</div>
+              <div>
+                <h4 class="font-semibold">Monitoring & Reporting</h4>
+                <p class="text-sm text-gray-600 mt-1">Playback logs, impressions estimates and weekly performance dashboards delivered as PDFs or via online portal.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
+            <div class="flex items-start gap-4">
+              <div class="p-3 rounded-lg bg-indigo-50 text-indigo-600">🔧</div>
+              <div>
+                <h4 class="font-semibold">On-site & Technical Support</h4>
+                <p class="text-sm text-gray-600 mt-1">Installation support, live checks, and priority troubleshooting for premium clients.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="p-6 bg-white rounded-xl shadow">
+        <h3 class="font-semibold">Why LED Advertising Works</h3>
+        <ul class="mt-3 text-sm text-gray-600 space-y-2">
+          <li>High dwell times at city centres</li>
+          <li>Dynamic movement attracts attention more than static billboards</li>
+          <li>Flexible scheduling and creative rotation</li>
+        </ul>
+
+        <div class="mt-6">
+          <a href="#contact" class="inline-block px-4 py-2 rounded-lg bg-accent text-white">Request a Media Kit</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO (GRID + case modal templates) -->
+<section id="portfolio" class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex items-center justify-between">
+      <h2 class="text-2xl font-extrabold">Selected Case Studies</h2>
+      <a href="#contact" class="text-sm text-accent">Request full casebook →</a>
+    </div>
+
+    <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <!-- card 1 -->
+      <article class="bg-white rounded-xl shadow overflow-hidden">
+        <img src="case1.jpg" alt="Retail campaign" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h3 class="font-semibold">Retail Launch — 2-week Prime Package</h3>
+          <p class="text-sm text-gray-600 mt-1">Achieved 18% uplift in store visits during the campaign window.</p>
+          <div class="mt-3 flex items-center justify-between">
+            <div class="text-sm text-gray-500">10K+ daily reach</div>
+            <button class="text-sm text-accent">View details</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- card 2 -->
+      <article class="bg-white rounded-xl shadow overflow-hidden">
+        <img src="case2.jpg" alt="Festival promo" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h3 class="font-semibold">Festival Promotion — High Impact</h3>
+          <p class="text-sm text-gray-600 mt-1">Optimized creative for evening viewing, resulting in strong brand recall.</p>
+          <div class="mt-3 flex items-center justify-between">
+            <div class="text-sm text-gray-500">Peak slots</div>
+            <button class="text-sm text-accent">View details</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- card 3 -->
+      <article class="bg-white rounded-xl shadow overflow-hidden">
+        <img src="case3.jpg" alt="Brand awareness" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h3 class="font-semibold">Brand Awareness — Month-long Run</h3>
+          <p class="text-sm text-gray-600 mt-1">Consistent day + evening slots for broad reach.</p>
+          <div class="mt-3 flex items-center justify-between">
+            <div class="text-sm text-gray-500">30 days</div>
+            <button class="text-sm text-accent">View details</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- INSIGHTS / BLOG PREVIEW -->
+<section id="insights" class="py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-2xl font-extrabold">Insights & Creative Tips</h2>
+    <p class="text-gray-600 mt-2">Brief reads and practical tips for designing high-performing LED ads.</p>
+
+    <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <article class="bg-white p-6 rounded-xl shadow">
+        <h4 class="font-semibold">Designing for Legibility</h4>
+        <p class="text-sm text-gray-600 mt-2">Keep short copy, high-contrast colors, and large type for LED readability.</p>
+      </article>
+      <article class="bg-white p-6 rounded-xl shadow">
+        <h4 class="font-semibold">Motion & Attention</h4>
+        <p class="text-sm text-gray-600 mt-2">Use subtle motion to guide the eye — avoid fast cuts for outdoor display.</p>
+      </article>
+      <article class="bg-white p-6 rounded-xl shadow">
+        <h4 class="font-semibold">Time Your Campaign</h4>
+        <p class="text-sm text-gray-600 mt-2">Dayparting can double effectiveness relative to uniform scheduling.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING (detailed) -->
+<section id="pricing" class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-extrabold text-gray-800">Pricing & Packages</h2>
+    <p class="text-gray-600 mt-2 max-w-2xl">Transparent daily rates. We also offer long-run discounts and custom bundles for agencies.</p>
+
+    <div class="mt-12 grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+      <!-- Starter -->
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition duration-300">
+        <h3 class="font-semibold text-lg text-gray-800">Starter</h3>
+        <div class="mt-3 text-2xl font-extrabold text-gray-900">NRs. 2,500 <span class="text-sm text-gray-500">/day</span></div>
+        <ul class="mt-4 text-sm text-gray-600 space-y-2">
+          <li>10s creative loop</li>
+          <li>Evening prime slots</li>
+          <li>10 Min Running Time</li>
+        </ul>
+      </div>
+
+      <!-- Starter Weekly -->
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+        <h3 class="font-semibold text-lg text-gray-800">Starter Weekly</h3>
+        <div class="mt-3 text-2xl font-extrabold text-gray-900">NRs. 4500 <span class="text-sm text-gray-500">/Week</span></div>
+        <ul class="mt-4 text-sm text-gray-600 space-y-2">
+          <li>Custom creative</li>
+          <li>70 min Running Time</li>
+          <li>+5 min Bonus Time</li>
+        </ul>
+      </div>
+
+      <!-- Starter Monthly -->
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+        <h3 class="font-semibold text-lg text-gray-800">Starter Monthly</h3>
+        <div class="mt-3 text-2xl font-extrabold text-gray-900">NRs. 7500 <span class="text-sm text-gray-500">/Month</span></div>
+        <ul class="mt-4 text-sm text-gray-600 space-y-2">
+            <li>Custom creative</li>
+            <li>300 min Running Time</li>
+            <li>+10 min Bonus Time</li>
+            
+        </ul>
+      </div>
+
+      <!-- Starter Bi-Annually -->
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+        <h3 class="font-semibold text-lg text-gray-800">Starter Bi-Annually</h3>
+        <div class="mt-3 text-2xl font-extrabold text-gray-900">NRs. 12,500 <span class="text-sm text-gray-500">/6 Months</span></div>
+        <ul class="mt-4 text-sm text-gray-600 space-y-2">
+            <li>Custom creative</li>
+            <li>1800 min Running Time</li>
+            <li>+20 min Bonus Time</li>
+        </ul>
+      </div>
+
+      <!-- Growth -->
+      <div class="bg-white p-6 rounded-xl shadow-xl border-2 border-blue-600 hover:shadow-2xl transition relative">
+        <div class="absolute -top-3 right-3 px-3 py-1 rounded-full bg-blue-600 text-white text-xs font-semibold">Most popular</div>
+        <h3 class="font-semibold text-lg text-gray-800 mt-2">Growth</h3>
+        <div class="mt-3 text-2xl font-extrabold text-gray-900">NRs. 24,000 <span class="text-sm text-gray-500">/Year</span></div>
+        <ul class="mt-4 text-sm text-gray-600 space-y-2">
+          <li>20s creative loop</li>
+          <li>3600 min Running Time</li>
+          <li>+50 min Bonus Time</li>
+        </ul>
+      </div>
+
+        <!-- Local Promotion -->
+      <div class="bg-white p-6 rounded-xl shadow-xl border-2 border-green-600 hover:shadow-2xl transition relative">
+        <div class="absolute -top-3 right-3 px-3 py-1 rounded-full bg-green-600 text-white text-xs font-semibold">Promotional</div>
+
+        <h3 class="font-semibold text-lg text-gray-800">Campaign</h3>
+        <div class="mt-3 text-2xl font-extrabold text-gray-900">NRs. 20,000 <span class="text-sm text-gray-500">/Month</span></div>
+        <ul class="mt-4 text-sm text-gray-600 space-y-2">
+          <li>Short local campaigns</li>
+          <li>Prime Peak Hour slots</li>
+          <li>Priority Support</li>
+        </ul>
+      </div>
+
+      <!-- Enterprise Plan -->
+      <div class="bg-white p-6 rounded-xl shadow-xl border-2 border-orange-600 hover:shadow-2xl transition relative">
+        <div class="absolute -top-3 right-3 px-3 py-1 rounded-full bg-orange-600 text-white text-xs font-semibold">Premium</div>
+        <h3 class="font-semibold text-lg text-gray-800">Enterprise</h3>
+        <div class="mt-3 text-2xl font-extrabold text-gray-900">NRs. 35,000 <span class="text-sm text-gray-500">/6 Months</span></div>
+        <ul class="mt-4 text-sm text-gray-600 space-y-2">
+          <li>3600 min Running Time</li>
+          <li>+100 min Bonus</li>
+          <li>Priority Support</li>
+        </ul>
+      </div>
+
+      <!-- Enterprise Plan -->
+      <div class="bg-white p-6 rounded-xl shadow-xl border-2 border-orange-600 hover:shadow-2xl transition relative">
+        <div class="absolute -top-3 right-3 px-3 py-1 rounded-full bg-orange-600 text-white text-xs font-semibold">Premium</div>
+        <h3 class="font-semibold text-lg text-gray-800">Ultimate</h3>
+        <div class="mt-3 text-2xl font-extrabold text-gray-900">NRs. 60,000 <span class="text-sm text-gray-500">/Year</span></div>
+        <ul class="mt-4 text-sm text-gray-600 space-y-2">
+          <li>7200 min Running Time</li>
+          <li>+200 min Bonus</li>
+          <li>Priority Support</li>
+        </ul>
+      </div>
+
+      <!-- Custom Plan -->
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+        <div class="inline-block px-2 py-1 rounded-full bg-gray-200 text-gray-700 text-xs font-semibold">Flexible</div>
+        <h3 class="font-semibold text-lg text-gray-800 mt-2">Custom Plan</h3>
+        <div class="mt-3 text-2xl font-extrabold text-gray-900">Varies <span class="text-sm text-gray-500">/Contact</span></div>
+        <ul class="mt-4 text-sm text-gray-600 space-y-2">
+          <li>Tailored campaigns</li>
+          <li>Flexible duration</li>
+          <li>Dedicated consultation</li>
+        </ul>
+        <button class="mt-6 w-full py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition">Contact Sales</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- TEAM & TRUSTED LOGOS -->
+<section class="py-20">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-2xl font-extrabold">Trusted by brands</h2>
+    <div class="mt-6 flex items-center justify-center gap-8 flex-wrap">
+      <img src="somany.png" alt="client" class="h-10 object-contain opacity-80" />
+      <img src="ett.png" alt="client" class="h-10 object-contain opacity-80" />
+      <img src="somany.png" alt="client" class="h-10 object-contain opacity-80" />
+      <img src="ett.png" alt="client" class="h-10 object-contain opacity-80" />
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS (carousel) -->
+<section id="testimonials" class="py-20 bg-gray-50">
+  <div class="max-w-5xl mx-auto px-6 text-center">
+    <h2 class="text-2xl font-extrabold">Client Feedback</h2>
+    <div id="testimonialsWrap" class="mt-8 relative">
+      <div class="bg-white p-8 rounded-xl shadow text-left" id="testimonialContent">“Vedhika helped us reach thousands of customers in the first week — excellent service.”<div class="mt-4 text-sm text-gray-600">— Retail Brand</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-16">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="text-2xl font-extrabold">Frequently Asked Questions</h2>
+    <div class="mt-6 space-y-4">
+      <details class="bg-white p-4 rounded-xl shadow"><summary class="font-semibold">How do I book a slot?</summary><div class="mt-2 text-sm text-gray-600">Use our booking form or contact sales with preferred dates and creative. We will confirm availability within 24 hours.</div></details>
+      <details class="bg-white p-4 rounded-xl shadow"><summary class="font-semibold">What video formats do you accept?</summary><div class="mt-2 text-sm text-gray-600">MP4 (H.264) is preferred — we re-encode if needed. Provide a high bitrate source for best results.</div></details>
+      <details class="bg-white p-4 rounded-xl shadow"><summary class="font-semibold">Do you provide creative services?</summary><div class="mt-2 text-sm text-gray-600">Yes — our in-house team creates LED-optimized motion ads for an additional fee or included in some packages.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT & BOOKING (full featured) -->
+<section id="contact" class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-10">
+    <div>
+      <h2 class="text-2xl font-extrabold">Contact & Booking</h2>
+      <p class="text-gray-600 mt-2">Fill the booking form — we'll respond within 24 hours with availability and next steps.</p>
+
+      <dl class="mt-6 text-sm text-gray-700 space-y-3">
+        <div><dt class="font-semibold">Office</dt><dd>Hetauda-4, Parijatpath</dd></div>
+        <div><dt class="font-semibold">Phone</dt><dd>+977-9845687456</dd></div>
+        <div><dt class="font-semibold">Email</dt><dd>contact@vedhika.com.np</dd></div>
+      </dl>
+
+      <div class="mt-8">
+        <a download class="inline-block px-4 py-2 rounded-md bg-primary text-white">Download Media Kit (PDF)</a>
+      </div>
+    </div>
+
+    <form id="bookingForm" class="bg-gray-50 p-6 rounded-xl shadow" onsubmit="return handleBooking(event)">
+      <label class="block text-sm">Company / Brand<input id="company" name="company" required class="w-full mt-2 p-3 rounded-md border border-gray-200" /></label>
+      <div class="grid grid-cols-2 gap-3 mt-4">
+        <label class="text-sm">Start date<input id="startDate" type="date" name="start" required class="w-full mt-2 p-3 rounded-md border border-gray-200" /></label>
+        <label class="text-sm">Duration (days)
+          <select id="duration" name="duration" class="w-full mt-2 p-3 rounded-md border border-gray-200">
+            <option value="7">7</option>
+            <option value="14">14</option>
+            <option value="30">30</option>
+          </select>
+        </label>
+      </div>
+
+      <label class="block text-sm mt-4">Video file (optional)
+        <input id="videoFile" name="videoFile" type="file" accept="video/*" class="w-full mt-2 p-2" />
+      </label>
+
+      <label class="block text-sm mt-4">Notes<textarea id="notes" rows="4" class="w-full mt-2 p-3 rounded-md border border-gray-200"></textarea></label>
+
+      <div class="mt-4 flex gap-3">
+        <button type="submit" class="px-4 py-2 rounded-md bg-accent text-white">Request Booking</button>
+        <button type="button" onclick="fillDemo()" class="px-4 py-2 rounded-md border">Fill Demo</button>
+      </div>
+
+      <p id="bookingNotice" class="text-sm text-gray-600 mt-3"></p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="pt-12 pb-6 bg-gray-100">
+  <div class="max-w-7xl mx-auto px-6 text-sm text-gray-600 flex flex-col md:flex-row justify-between items-center">
+    <div>© <span id="year"></span> Vedhika Advertising House</div>
+    <div class="mt-3 md:mt-0">Designed for LED campaigns • <a href="#contact" class="text-accent">Contact</a></div>
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script>
+  // mobile menu
+  document.getElementById('mobileToggle').addEventListener('click', ()=> document.getElementById('mobileMenu').classList.toggle('hidden'));
+  document.getElementById('bookTop')?.addEventListener('click', ()=> location.hash='#contact');
+  document.getElementById('bookMobile')?.addEventListener('click', ()=> location.hash='#contact');
+
+  // booking handler (placeholder)
+  function handleBooking(e){
+    e.preventDefault();
+    const company = document.getElementById('company').value;
+    const start = document.getElementById('startDate').value;
+    if(!company || !start){ document.getElementById('bookingNotice').textContent = 'Please enter company name and start date.'; return false; }
+    document.getElementById('bookingNotice').textContent = 'Thanks — booking request received. We will confirm within 24 hours.';
+    e.target.reset();
+    return false;
+  }
+
+  function fillDemo(){
+    document.getElementById('company').value='Demo Brand';
+    document.getElementById('startDate').value=new Date().toISOString().slice(0,10);
+  }
+
+  // testimonials rotate (simple)
+  const testimonials = [
+    '“Vedhika helped us reach thousands of customers in the first week — excellent service.” — Retail Brand',
+    '“Professional, fast and reliable. Highly recommended.” — Event Organizer',
+    '“Great playback accuracy and reporting.” — Local Service'
+  ];
+  let ti=0; setInterval(()=>{ document.getElementById('testimonialContent').textContent=testimonials[ti]; ti=(ti+1)%testimonials.length; },4000);
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<!-- Structured data -->
+<script type="application/ld+json">{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"Vedhika Advertising",
+  "url":"https://vedhika.example",
+  "logo":"https://vedhika.example/your-logo.png",
+  "contactPoint":[{"@type":"ContactPoint","telephone":"+977-980-xxxxxxx","contactType":"customer service"}]
+}</script>
+
 </body>
 </html>

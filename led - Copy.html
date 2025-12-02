@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Interactive Billboard Video Warp</title>
+<style>
+  :root{
+    --maxw: 1100px;
+    --bg-url: url("about.jpg"); /* image you uploaded */
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:#0b0f16;
+    color:#e6f7ff;
+    font-family:Inter,Arial,Helvetica,sans-serif;
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    padding:28px;
+    gap:20px;
+    min-height:100vh;
+  }
+
+  .stage {
+    position:relative;
+    width: min(92vw, var(--maxw));
+    /* preserve the image aspect ratio (image is 1024×682 => 0.666) */
+    height: calc(min(92vw, var(--maxw)) * 0.666);
+    background-image: var(--bg-url);
+    background-size: cover;
+    background-position: center;
+    border-radius:8px;
+    overflow:hidden;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.65);
+  }
+
+  /* the overlay area that contains the video */
+  .video-wrapper {
+    position:absolute;
+    inset:0;
+    pointer-events:none; /* let handles catch events */
+  }
+
+  /* the video element that will be clipped */
+  .warped-video {
+    position:absolute;
+    left:0; top:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    /* initial clip-path (will be dynamically updated) */
+    clip-path: polygon(6.4% 9.8%, 93.6% 9.8%, 93.6% 81.9%, 6.4% 81.9%);
+    -webkit-clip-path: polygon(6.4% 9.8%, 93.6% 9.8%, 93.6% 81.9%, 6.4% 81.9%);
+    transition: clip-path .06s linear;
+  }
+
+  /* subtle frame to help see the video area */
+  .warped-video-frame {
+    position:absolute;
+    inset:0;
+    border-radius:2px;
+    pointer-events:none;
+  }
+
+  /* corner handles */
+  .handle {
+    position:absolute;
+    width:18px;
+    height:18px;
+    background:linear-gradient(180deg,#fff,#d7eaff);
+    border-radius:50%;
+    transform:translate(-50%,-50%);
+    box-shadow:0 6px 18px rgba(0,0,0,0.45);
+    cursor:grab;
+    touch-action:none;
+    z-index:40;
+    border:2px solid rgba(0,0,0,0.25);
+  }
+  .handle:active{cursor:grabbing}
+
+  /* small UI */
+  .panel{
+    width:360px;
+    max-width:36vw;
+    background: linear-gradient(180deg,#07101a,#0b1520);
+    border-radius:12px;
+    padding:14px;
+    border:1px solid rgba(255,255,255,0.04);
+    box-shadow: 0 18px 50px rgba(0,0,0,0.6);
+    font-size:14px;
+    line-height:1.4;
+  }
+  .panel h3{margin:0 0 8px 0;color:#fff}
+  .coords{font-family:monospace;background:rgba(255,255,255,0.03);padding:8px;border-radius:8px;margin-top:8px;color:#dbeefc;white-space:pre-wrap}
+  .btns{display:flex;gap:8px;margin-top:10px}
+  button{background:linear-gradient(90deg,#00b7ff,#006aff);color:#00131a;padding:8px 10px;border-radius:8px;border:0;font-weight:700;cursor:pointer}
+  button.ghost{background:transparent;color:var(--muted);border:1px solid rgba(255,255,255,0.04)}
+  label{display:block;font-size:12px;color:rgba(255,255,255,0.7);margin-top:8px}
+  input[type=range]{width:100%}
+  small{color:rgba(255,255,255,0.6)}
+
+  /* help text */
+  .help{font-size:13px;color:rgba(255,255,255,0.72);margin-top:8px}
+
+  /* responsive tweaks */
+  @media (max-width:900px){
+    body{flex-direction:column;align-items:center}
+    .panel{max-width:92vw}
+  }
+</style>
+</head>
+<body>
+
+  <div class="stage" id="stage">
+    <div class="video-wrapper" id="videoWrapper">
+      <!-- replace src with your video file -->
+      <video id="videoEl" class="warped-video" autoplay muted loop playsinline src="video.mp4"></video>
+      <div class="warped-video-frame"></div>
+
+      <!-- draggable corner handles (tl, tr, br, bl) -->
+      <div class="handle" id="h-tl" title="Drag top-left"></div>
+      <div class="handle" id="h-tr" title="Drag top-right"></div>
+      <div class="handle" id="h-br" title="Drag bottom-right"></div>
+      <div class="handle" id="h-bl" title="Drag bottom-left"></div>
+    </div>
+  </div>
+
+  <div class="panel" id="panel">
+    <h3>Align video to billboard</h3>
+    <div class="help">Drag the four round handles until the video matches the billboard screen exactly. Use the sliders for fine adjustments.</div>
+
+    <label>Top-left X (%)</label>
+    <input type="range" id="tlx" min="0" max="100" step="0.01">
+    <label>Top-left Y (%)</label>
+    <input type="range" id="tly" min="0" max="100" step="0.01">
+
+    <label>Top-right X (%)</label>
+    <input type="range" id="trx" min="0" max="100" step="0.01">
+    <label>Top-right Y (%)</label>
+    <input type="range" id="try" min="0" max="100" step="0.01">
+
+    <label>Bottom-right X (%)</label>
+    <input type="range" id="brx" min="0" max="100" step="0.01">
+    <label>Bottom-right Y (%)</label>
+    <input type="range" id="bry" min="0" max="100" step="0.01">
+
+    <label>Bottom-left X (%)</label>
+    <input type="range" id="blx" min="0" max="100" step="0.01">
+    <label>Bottom-left Y (%)</label>
+    <input type="range" id="bly" min="0" max="100" step="0.01">
+
+    <div class="btns">
+      <button id="copyCss">Copy CSS</button>
+      <button id="reset" class="ghost">Reset</button>
+    </div>
+
+    <div style="margin-top:12px">
+      <div style="font-weight:700">Current clip-path</div>
+      <div class="coords" id="coords"></div>
+    </div>
+
+    <div style="margin-top:12px;font-size:13px;color:rgba(255,255,255,0.6)">
+      Tip: If alignment looks slightly off, try zooming (Ctrl+/Cmd +) in your browser to make finer adjustments.
+    </div>
+  </div>
+
+<script>
+(function(){
+  // initial default polygon (good starting place)
+  const defaults = {
+    tl: {x:6.4, y:9.8},
+    tr: {x:93.6, y:9.8},
+    br: {x:93.6, y:81.9},
+    bl: {x:6.4, y:81.9}
+  };
+
+  const stage = document.getElementById('stage');
+  const video = document.getElementById('videoEl');
+
+  const handles = {
+    tl: document.getElementById('h-tl'),
+    tr: document.getElementById('h-tr'),
+    br: document.getElementById('h-br'),
+    bl: document.getElementById('h-bl')
+  };
+
+  // range inputs
+  const ranges = {
+    tlx: document.getElementById('tlx'),
+    tly: document.getElementById('tly'),
+    trx: document.getElementById('trx'),
+    try: document.getElementById('try'),
+    brx: document.getElementById('brx'),
+    bry: document.getElementById('bry'),
+    blx: document.getElementById('blx'),
+    bly: document.getElementById('bly'),
+  };
+
+  const coordsBox = document.getElementById('coords');
+  const copyBtn = document.getElementById('copyCss');
+  const resetBtn = document.getElementById('reset');
+
+  // current polygon in %
+  const poly = {
+    tl: {...defaults.tl},
+    tr: {...defaults.tr},
+    br: {...defaults.br},
+    bl: {...defaults.bl}
+  };
+
+  // set initial range values
+  function setRangesFromPoly(){
+    ranges.tlx.value = poly.tl.x; ranges.tly.value = poly.tl.y;
+    ranges.trx.value = poly.tr.x; ranges.try.value = poly.tr.y;
+    ranges.brx.value = poly.br.x; ranges.bry.value = poly.br.y;
+    ranges.blx.value = poly.bl.x; ranges.bly.value = poly.bl.y;
+  }
+
+  // render handles positions and clip-path
+  function render(){
+    const rect = stage.getBoundingClientRect();
+
+    // position handles using percentage coords relative to stage
+    for(const key of ['tl','tr','br','bl']){
+      const h = handles[key];
+      const p = poly[key];
+      h.style.left = (p.x) + '%';
+      h.style.top  = (p.y) + '%';
+    }
+
+    // update clip-path on video
+    const clip = `${poly.tl.x}% ${poly.tl.y}%, ${poly.tr.x}% ${poly.tr.y}%, ${poly.br.x}% ${poly.br.y}%, ${poly.bl.x}% ${poly.bl.y}%`;
+    video.style.clipPath = `polygon(${clip})`;
+    video.style.webkitClipPath = `polygon(${clip})`;
+
+    coordsBox.textContent = `clip-path: polygon(\n  ${poly.tl.x}% ${poly.tl.y}%,\n  ${poly.tr.x}% ${poly.tr.y}%,\n  ${poly.br.x}% ${poly.br.y}%,\n  ${poly.bl.x}% ${poly.bl.y}%\n);`;
+    setRangesFromPoly();
+  }
+
+  // helper: convert client coords to percent relative to stage
+  function clientToPercent(clientX, clientY){
+    const r = stage.getBoundingClientRect();
+    const x = (clientX - r.left) / r.width * 100;
+    const y = (clientY - r.top)  / r.height * 100;
+    return {x: Math.max(0, Math.min(100, x)), y: Math.max(0, Math.min(100, y))};
+  }
+
+  // dragging logic
+  let active = null;
+  let pointerId = null;
+
+  function startDrag(e, corner){
+    e.preventDefault();
+    active = corner;
+    pointerId = e.pointerId || null;
+    e.target.setPointerCapture && e.target.setPointerCapture(e.pointerId);
+  }
+
+  function onPointerMove(e){
+    if(!active) return;
+    const p = clientToPercent(e.clientX, e.clientY);
+    poly[active].x = Number(p.x.toFixed(3));
+    poly[active].y = Number(p.y.toFixed(3));
+    render();
+  }
+
+  function endDrag(e){
+    if(!active) return;
+    try{ e.target.releasePointerCapture && e.target.releasePointerCapture(e.pointerId); }catch(e){}
+    active = null;
+  }
+
+  // attach pointer events to handles
+  for(const key of ['tl','tr','br','bl']){
+    const h = handles[key];
+    h.addEventListener('pointerdown', (ev)=> startDrag(ev, key));
+    h.addEventListener('pointermove', onPointerMove);
+    h.addEventListener('pointerup', endDrag);
+    h.addEventListener('pointercancel', endDrag);
+    // mobile: also support touchmove
+    h.addEventListener('touchmove', (ev)=> {
+      if(ev.touches && ev.touches[0]) {
+        const t = ev.touches[0];
+        const p = clientToPercent(t.clientX, t.clientY);
+        poly[key].x = Number(p.x.toFixed(3));
+        poly[key].y = Number(p.y.toFixed(3));
+        render();
+      }
+    }, {passive:false});
+  }
+
+  // allow changing via range inputs
+  ranges.tlx.addEventListener('input', ()=> { poly.tl.x = Number(ranges.tlx.value); render(); });
+  ranges.tly.addEventListener('input', ()=> { poly.tl.y = Number(ranges.tly.value); render(); });
+  ranges.trx.addEventListener('input', ()=> { poly.tr.x = Number(ranges.trx.value); render(); });
+  ranges.try.addEventListener('input', ()=> { poly.tr.y = Number(ranges.try.value); render(); });
+  ranges.brx.addEventListener('input', ()=> { poly.br.x = Number(ranges.brx.value); render(); });
+  ranges.bry.addEventListener('input', ()=> { poly.br.y = Number(ranges.bry.value); render(); });
+  ranges.blx.addEventListener('input', ()=> { poly.bl.x = Number(ranges.blx.value); render(); });
+  ranges.bly.addEventListener('input', ()=> { poly.bl.y = Number(ranges.bly.value); render(); });
+
+  // copy css
+  copyBtn.addEventListener('click', ()=>{
+    const css = `clip-path: polygon(${poly.tl.x}% ${poly.tl.y}%, ${poly.tr.x}% ${poly.tr.y}%, ${poly.br.x}% ${poly.br.y}%, ${poly.bl.x}% ${poly.bl.y}%);`;
+    navigator.clipboard && navigator.clipboard.writeText(css);
+    copyBtn.textContent = 'Copied!';
+    setTimeout(()=>copyBtn.textContent = 'Copy CSS', 1400);
+  });
+
+  resetBtn.addEventListener('click', ()=>{
+    Object.assign(poly.tl, defaults.tl);
+    Object.assign(poly.tr, defaults.tr);
+    Object.assign(poly.br, defaults.br);
+    Object.assign(poly.bl, defaults.bl);
+    render();
+  });
+
+  // initialize
+  setRangesFromPoly();
+  render();
+
+  // optional: make handles slightly larger when touching
+  for(const k in handles){
+    handles[k].addEventListener('mouseenter', ()=> handles[k].style.transform = 'translate(-50%,-50%) scale(1.08)');
+    handles[k].addEventListener('mouseleave', ()=> handles[k].style.transform = 'translate(-50%,-50%) scale(1)');
+  }
+
+  // allow dragging by pointer across stage when active
+  stage.addEventListener('pointermove', onPointerMove);
+  stage.addEventListener('pointerup', endDrag);
+  stage.addEventListener('pointercancel', endDrag);
+
+})();
+</script>
+
+</body>
+</html>
